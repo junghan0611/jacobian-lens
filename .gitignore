@@ -12,3 +12,6 @@ dist/
 *.pt
 slice*.html
 slices/
+
+# imported paper artifacts / copyrighted source material
+papers/anthropic/
