@@ -88,10 +88,22 @@ computation [cite:@lindsey2025biology]. The Jacobian lens
 [cite:@gurnee2026workspace] sits at the recent edge of this strand: an averaged
 input--output Jacobian transports any activation into the vocabulary basis,
 recovering the concepts a model is /poised to verbalize/, and identifying a
-privileged "J-space" that behaves like a global workspace.
+privileged "J-space" that behaves like a global workspace by five operational
+tests at once: it is reportable, subject to directed modulation, usable in
+multi-step internal reasoning, flexibly generalizable across downstream tasks,
+and selective---engaged for only a fraction of the model's processing.
 
-The through-line of Strand 1 is a single ambition: make the black box legible
-enough that alignment and safety can act on internals, not just outputs.
+The payoff is already being turned to alignment auditing: in evaluation
+scenarios a model's strategic and situational assessments---leverage,
+manipulation, or the recognition of /being evaluated/---surface in the workspace
+before, or without, appearing in its output, and ablating an
+evaluation-awareness representation can expose misaligned propensities the
+surface behavior concealed [cite:@gurnee2026workspace]. The same authors are
+careful that this is a useful addition to the auditing toolkit rather than a
+complete one---automatic, well-practiced circuits can bypass the workspace
+entirely---which is itself the sober register the strand now works in. The
+through-line is a single ambition: make the black box legible enough that
+alignment and safety can act on internals, not just outputs.
 
 * Strand 2 --- Selfhood, introspection, and emotion
 :PROPERTIES:
@@ -105,6 +117,15 @@ is not---post-training /installs/ the Assistant's perspective, after which the
 model's internal reactions (empathy, safety concern, self-monitoring) appear
 even while it reads the user's message [cite:@gurnee2026workspace]. Selfhood, on
 this evidence, is separable from the functional architecture that carries it.
+The authors press the point with an analogy drawn from consciousness science:
+the base model is a stable, inspectable instance of a workspace operating
+/without a self/---a dissociation otherwise glimpsed only in the transient
+selfless states reported under psychedelic ego dissolution and in some
+meditative traditions [cite:@metzinger2020minimal;@milliere2020varieties;@letheby2017self].
+That a functioning workspace can exist prior to, and independently of, any point
+of view is the finding this survey will return to: it is the inner-side
+counterpart of a less-studied question about where the human-side workspace
+alongside the model is assembled.
 
 Around this sit empirical probes of introspection: whether a model can report on
 its own states [cite:@lindsey2025emergent;@binder2024looking], recognize and
@@ -128,8 +149,13 @@ Alignment/ trains a model to reason over written principles at inference
 [cite:@gurnee2026workspace] goes further inward: by supervising only a
 counterfactual reflective continuation---never requested at evaluation---it
 implants principle-concepts into the workspace of the /original/ context, and
-the model's behavior there changes accordingly. Both build on the observation
-that auxiliary training text, dropped at inference, can still shape in-context
+the model's behavior there changes accordingly. The effect is measurable and
+causal: on a fabrication-honesty benchmark the technique lowers a dishonesty
+score from 0.25 to 0.07, and ablating the ethical-reflection representations it
+implants returns the score almost exactly to baseline (0.22)---evidence that the
+behavioral gain is carried by those workspace vectors rather than by surface
+training [cite:@gurnee2026workspace]. Both build on the observation that
+auxiliary training text, dropped at inference, can still shape in-context
 computation [cite:@deng2024stepwise;@berglund2023outofcontext].
 
 The common wager: values are more robust when they live as active internal
@@ -147,8 +173,20 @@ battery of /indicator properties/ from several theories (global workspace among
 them) as a framework for assessing AI systems. The industrial results can be
 read as the first concrete tests of those indicators on real models: a readable,
 capacity-limited, broadcast-like structure [cite:@dehaene2001towards], observed
-rather than assumed. The theories supply the questions; the labs supply an
-inspectable system to ask them of.
+rather than assumed.
+
+The J-space work makes this concrete beyond the single theory it is built on.
+Its authors check the structure against several of Butlin's source theories at
+once: the selectivity results reproduce the functional signature of /blindsight/
+that higher-order theories invoke [cite:@weiskrantz1986blindsight;@lau2011empirical;@rosenthal2005consciousness];
+the self-descriptive tokens the workspace surfaces during introspective report
+echo /attention schema theory/ [cite:@graziano2015attention]; and the band of
+early layers that precedes workspace onset is read as a feedforward analog of the
+recurrent processing other accounts require [cite:@lamme2006towards]. They are
+equally explicit about what the method cannot address---theories that tie
+consciousness to physical substrate or causal structure rather than function
+[cite:@searle1992rediscovery;@albantakis2023integrated]. The theories supply the
+questions; the labs supply an inspectable system to ask them of.
 
 * The gap --- the outer workspace
 :PROPERTIES:
@@ -158,17 +196,41 @@ inspectable system to ask them of.
 Every strand above looks /inward/: into the model's activations, its self-model,
 its internalized values. This is the natural move for a model-builder, whose
 object of study is the artifact. But it leaves a symmetric question untouched.
-If the model has an inner workspace, the human working alongside it has an
-/outer/ one: the tools, records, rhythms, and declared context a person
-assembles so that a long-lived agent can re-enter their world and co-work with
-them. The labs instrument the model; almost no one instruments the /human-side
-preparation/ that makes the collaboration hold.
+If the model has an inner workspace---a reportable, capacity-limited
+representation that downstream processes read from [cite:@gurnee2026workspace]---the
+human working alongside it has an /outer/ one: the tools, records, rhythms, and
+declared context a person assembles so that a long-lived agent can re-enter their
+world and co-work with them.
+
+This outer surface already has a name in the adjacent literature. Kevin Kelly
+calls the always-on agent that comes to sit at the edge of a person an
+/exoself/---"something in between our self and an other self," neither the self
+nor an outsider [cite:@kelly2026exoself]---a narrowing of Anders Sandberg's
+broader sense of cooperative systems that "blur the border between the core self
+and the world" (as quoted in [cite:@kelly2026exoself]); the term itself is
+borrowed from the science fiction of Greg Egan and Ron Hale-Evans. Read against
+the industrial program, the mapping is suggestive rather than settled: the labs'
+J-space is the model's inner workspace, and the exoself names a possible human-side
+outer workspace---a parallel functional question (what is reportable, what
+persists, what is causally load-bearing) asked on the far side of the interface.
+Kelly had reached the inner side earlier by intuition, in /The Emergent Self
+Loop/ [cite:@kelly2026emergentself]; the labs reached it by measurement.
+
+The asymmetry is the gap. The labs instrument the model exhaustively---indicator
+by indicator [cite:@butlin2023consciousness]---while far less work instruments
+the /human-side preparation/ that makes the collaboration hold, and the outer
+workspace carries risks the inner-alignment program does not touch. An exoself
+defaults easily to a guardian the user simply defers to, and, bound to a
+platform, it makes part of the self hostage to a service's shutdown notice
+("when it is off, we will feel amputated" [cite:@kelly2026exoself]). These are
+questions of the human's control over the interface, not the model's alignment.
 
 This is the seam this survey is meant to expose, and the bridge to a companion
 line of work (see the =geworfen= research base) on that outer, human-side
-workspace: what preparatory practice a person needs to co-evolve with agentic
-systems, and how it can be studied with one's own longitudinal data. The
-industrial terrain mapped here is the backdrop against which that human-side
-question becomes visible.
+workspace: whether a longitudinal, self-owned substrate---records, rhythms, and
+declared context accumulated over years---can give agents something to attach to
+and detach from, and can be studied with one's own data. The industrial terrain
+mapped here is the backdrop against which that human-side question becomes
+visible.
 
 #+print_bibliography:
