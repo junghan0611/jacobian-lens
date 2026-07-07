@@ -53,7 +53,12 @@
 
 ### 담긴 소재
 
-- (아직 없음 — 첫 import 전.)
+- **J-space** — 「Verbalizable Representations Form a Global Workspace in Language
+  Models」(2026-07-06, `transformer-circuits.pub/2026/workspace`). `PAPER-IMPORT.md`
+  절차로 2026-07-07 import 완료 → `papers/anthropic/jspace/`(gitignore, 로컬 전용):
+  org SSOT + html + acmart pdf + **오프라인 캡슐/인터랙티브 html**. 검증 통과 —
+  인용 155·PNG 10·csl-entry 173·figure 84, 캡슐 external/failed 0(오프라인 재스윕
+  PASS). 재현은 `PAPER-IMPORT.md`의 5개 명령 그대로.
 
 ## 이 문서를 고칠 때
 
