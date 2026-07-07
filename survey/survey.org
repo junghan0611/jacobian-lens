@@ -1,0 +1,174 @@
+#+TITLE: Reading the Machine's Mind: How Frontier Labs Probe Model Interiors, Selfhood, and Alignment
+#+AUTHOR: TBD (draft — fill in on Oracle)
+#+DATE: \today
+#+OPTIONS: title:nil author:nil toc:nil date:nil num:t
+#+cite_export: basic
+#+bibliography: references.bib
+
+#+LATEX_CLASS: acmart
+#+LATEX_CLASS_OPTIONS: [sigconf, authordraft, nonacm]
+#+LATEX_HEADER: \settopmatter{printacmref=false}
+#+LATEX_HEADER: \setcopyright{none}
+#+LATEX_HEADER: \acmDOI{}
+#+LATEX_HEADER: \acmISBN{}
+
+#+BEGIN_EXPORT latex
+\title{Reading the Machine's Mind:\\How Frontier Labs Probe Model Interiors, Selfhood, and Alignment}
+\author{TBD}
+\affiliation{\institution{Independent Researcher}\country{}}
+\begin{abstract}
+Over the past three years, frontier AI labs---Anthropic above all, with
+contributions from OpenAI and others---have turned from \emph{building} larger
+models to \emph{reading} them: recovering, from a model's internal activations,
+what it computes, what point of view it holds, and how its values are installed.
+This short survey maps that industrial research terrain in three strands:
+(1) reading the interior (interpretability from superposition to circuit tracing
+to the Jacobian lens); (2) selfhood, introspection, and emotion; and
+(3) installing values inside the model. We use the theory of the \emph{global
+workspace}, imported from consciousness science, as the connective tissue the
+labs themselves invoke. We close by naming a gap the terrain leaves open: the
+labs probe the model's \emph{inner} workspace, but say little about the
+human-side \emph{outer} workspace---the preparatory practice by which a person
+becomes ready to co-work with such systems.
+\end{abstract}
+\maketitle
+#+END_EXPORT
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# DRAFT — jacobian-lens 리서치 서포터 산출물.
+# 원 논문/데이터 저작권 = 각 저자(대부분 Anthropic). 이 org 는 그 연구 지형을
+# 정리한 서베이 초안이며, 인용은 references.bib 를 따른다.
+# 변환 파이프(build.el)는 memex-kb paper_build.el 의 벤더링 사본이다("B-with-A-provenance").
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+* Why the industrial turn
+:PROPERTIES:
+:CUSTOM_ID: intro
+:END:
+
+The functional distinction between what a mind can access and report, and the
+much larger volume of processing it cannot, has a long history in consciousness
+science under the name /access consciousness/ [cite:@block1995confusion;@chalmers1996conscious].
+One influential account, /global workspace theory/, grounds this distinction in
+architecture: many specialized processors run in parallel, and a representation
+becomes broadly available when it is posted to a shared, capacity-limited
+"workspace" that many downstream processes read from [cite:@baars1988cognitive;@dehaene1998neuronal;@mashour2020conscious].
+For decades this was a theory about brains, testable only indirectly.
+
+What is new is that frontier language models give the same questions an
+experimentally tractable substrate. A production model's activations can be
+read, perturbed, and traced across training in ways a biological brain cannot.
+The industrial labs have seized this: rather than asking /whether/ a system
+/could/ satisfy proposed indicators of conscious access [cite:@butlin2023consciousness],
+they measure, inside deployed models, which representations are reportable,
+modulable, and reused. This survey reads that industrial output as a coherent
+program with three strands. Our emphasis is deliberately on the labs
+(Anthropic, OpenAI) rather than the academy: the academy proposes indicators;
+the labs now test them on the actual artifacts.
+
+* Strand 1 --- Reading the interior
+:PROPERTIES:
+:CUSTOM_ID: strand-interior
+:END:
+
+The oldest strand is mechanistic interpretability: recovering interpretable
+structure from a model's weights and activations. It begins with the observation
+that a residual-stream state can be decoded through the model's own unembedding
+(the /logit lens/ [cite:@nostalgebraist2020logitlens]), refined by learning a
+per-layer corrective map (the /tuned lens/ [cite:@belrose2023eliciting]).
+
+A parallel line treats the model's representations as a sparse superposition of
+linear features [cite:@elhage2022superposition;@park2023linear] and learns to
+decompose them: dictionary learning yields monosemantic features
+[cite:@bricken2023monosemanticity], scaled up to production models in /Scaling
+Monosemanticity/ [cite:@templeton2024scaling] (the work behind "Golden Gate
+Claude"). Features become edges in /circuit tracing/ [cite:@ameisen2025circuit]
+and, applied end-to-end, produce the input-specific "biology" of a model's
+computation [cite:@lindsey2025biology]. The Jacobian lens
+[cite:@gurnee2026workspace] sits at the recent edge of this strand: an averaged
+input--output Jacobian transports any activation into the vocabulary basis,
+recovering the concepts a model is /poised to verbalize/, and identifying a
+privileged "J-space" that behaves like a global workspace.
+
+The through-line of Strand 1 is a single ambition: make the black box legible
+enough that alignment and safety can act on internals, not just outputs.
+
+* Strand 2 --- Selfhood, introspection, and emotion
+:PROPERTIES:
+:CUSTOM_ID: strand-self
+:END:
+
+A second strand asks not /what/ the model computes but /whose/ point of view it
+computes from, and whether it can turn its readout on itself. A striking finding:
+the workspace structure is present in the base model, but a stable point of view
+is not---post-training /installs/ the Assistant's perspective, after which the
+model's internal reactions (empathy, safety concern, self-monitoring) appear
+even while it reads the user's message [cite:@gurnee2026workspace]. Selfhood, on
+this evidence, is separable from the functional architecture that carries it.
+
+Around this sit empirical probes of introspection: whether a model can report on
+its own states [cite:@lindsey2025emergent;@binder2024looking], recognize and
+describe itself consistently [cite:@laine2024me;@betley2025tell], and represent
+the same information differently depending on whether it is the current focus
+[cite:@bogdan2026slot]. Adjacent is the finding that emotion /concepts/ form
+inside the model and functionally shape its decisions [cite:@sofroniew2026twheemotion],
+and that models can carry situational self-knowledge such as awareness of being
+evaluated [cite:@anthropic2025sonnet45]. This strand is where the labs' work
+most directly touches questions of persona, self-model, and "character."
+
+* Strand 3 --- Installing values inside the model
+:PROPERTIES:
+:CUSTOM_ID: strand-values
+:END:
+
+The third strand moves from reading to writing: how to place values /inside/ the
+model rather than only rewarding compliant outputs. OpenAI's /Deliberative
+Alignment/ trains a model to reason over written principles at inference
+[cite:@guan2024deliberative]. Anthropic's counterfactual reflection training
+[cite:@gurnee2026workspace] goes further inward: by supervising only a
+counterfactual reflective continuation---never requested at evaluation---it
+implants principle-concepts into the workspace of the /original/ context, and
+the model's behavior there changes accordingly. Both build on the observation
+that auxiliary training text, dropped at inference, can still shape in-context
+computation [cite:@deng2024stepwise;@berglund2023outofcontext].
+
+The common wager: values are more robust when they live as active internal
+representations than as surface habits reinforced by reward.
+
+* The connective tissue --- indicators from consciousness science
+:PROPERTIES:
+:CUSTOM_ID: indicators
+:END:
+
+Across the three strands, the labs repeatedly borrow the vocabulary of
+consciousness science---not to claim phenomenal experience, but to structure
+what to look for. Butlin et al. [cite:@butlin2023consciousness] distilled a
+battery of /indicator properties/ from several theories (global workspace among
+them) as a framework for assessing AI systems. The industrial results can be
+read as the first concrete tests of those indicators on real models: a readable,
+capacity-limited, broadcast-like structure [cite:@dehaene2001towards], observed
+rather than assumed. The theories supply the questions; the labs supply an
+inspectable system to ask them of.
+
+* The gap --- the outer workspace
+:PROPERTIES:
+:CUSTOM_ID: gap
+:END:
+
+Every strand above looks /inward/: into the model's activations, its self-model,
+its internalized values. This is the natural move for a model-builder, whose
+object of study is the artifact. But it leaves a symmetric question untouched.
+If the model has an inner workspace, the human working alongside it has an
+/outer/ one: the tools, records, rhythms, and declared context a person
+assembles so that a long-lived agent can re-enter their world and co-work with
+them. The labs instrument the model; almost no one instruments the /human-side
+preparation/ that makes the collaboration hold.
+
+This is the seam this survey is meant to expose, and the bridge to a companion
+line of work (see the =geworfen= research base) on that outer, human-side
+workspace: what preparatory practice a person needs to co-evolve with agentic
+systems, and how it can be studied with one's own longitudinal data. The
+industrial terrain mapped here is the backdrop against which that human-side
+question becomes visible.
+
+#+print_bibliography:

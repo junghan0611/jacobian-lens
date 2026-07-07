@@ -15,3 +15,17 @@ slices/
 
 # imported paper artifacts / copyrighted source material
 papers/anthropic/
+
+# survey build artifacts (source-only in git; reproduce with `make`)
+survey/*.pdf
+survey/*.html
+survey/*.tex
+survey/*.aux
+survey/*.bbl
+survey/*.blg
+survey/*.fdb_latexmk
+survey/*.fls
+survey/*.log
+survey/*.out
+survey/*.toc
+survey/.build/
