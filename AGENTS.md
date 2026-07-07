@@ -29,6 +29,23 @@
   요청 전엔 커밋하지 않는다.
 - 비공개 메모·토큰·로컬 경로·사적 핸드오프를 tracked file에 넣지 말 것.
 
+## 이웃 리포 — 역할 분담
+
+힣의 작업은 세 리포로 나뉜다. 담당자는 경계를 지킨다.
+
+| 리포 | 역할 |
+|---|---|
+| 이 리포 (`jacobian-lens`) | 외부 전문가 연구(앤트로픽 J-space 등) **관찰소** — "남의 논문을 어떻게 담나" |
+| `~/repos/gh/geworfen` | 힣의 연구 **정본**(`docs/`, 나중 `docs/paper/`) — "내 논문을 어떻게 내나" |
+| `~/repos/gh/memex-kb` | 문서 변환기 **SSOT** (org→PDF/HTML/interactive). 여기도 거기도 변환기를 새로 만들지 않는다 |
+
+- 페이퍼 산출 로직은 **여기서 앤트로픽 J-space로 먼저 검증**한다(→ `PAPER-IMPORT.md`). 그
+  검증 수치(PDF·citeproc·figure·캡슐 external 0)가 geworfen 논문 빌드의 baseline이다.
+- geworfen은 그 검증된 memex-kb 로직을 **벤더링**해서 재사용한다(`docs/build.el` =
+  memex-kb `paper_build.el` 사본), 개선분은 memex-kb→geworfen으로 동기화 —
+  **"B-with-A-provenance"**: 메커니즘은 self-contained(`nix build` 단독 빌드), 출처는
+  memex-kb upstream. geworfen 쪽 AGENTS.md의 "논문 산출 파이프" 섹션과 대칭이다.
+
 ## North star — 왜 이걸 가져왔나
 
 레퍼런스는 Denote ID로 건다(제목은 바뀔 수 있으니 ID로 찾는다).
