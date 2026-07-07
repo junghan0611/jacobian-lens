@@ -60,9 +60,21 @@ OUT="$PWD/papers/anthropic"
 
 ## View the interactive document
 
+From the repo root, use the bundled helper. It autodetects the capsule's
+`*.interactive.html` path and, if the capsule is missing, prints a hint to run
+the import first (it only serves — it never converts):
+
+```bash
+./serve.sh                 # jspace on :8877 (defaults)
+./serve.sh jspace 9000     # override name / port
+# → open the URL it prints, e.g.
+#   http://localhost:8877/2026/workspace/jspace.interactive.html
+```
+
+Equivalent raw form:
+
 ```bash
 cd papers/anthropic/jspace/capsule && python3 -m http.server 8877
-# open http://localhost:8877/2026/workspace/jspace.interactive.html
 ```
 
 Expect: figures render (parquet loads from localhost), math via local KaTeX, and **zero external
