@@ -272,7 +272,9 @@ visible.
 
 # ━━ 3부 가드 (붙박이) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # 이 절은 outer workspace 아이디어의 *계보 서베이*다(남의 연구). 힣의 가든/하네스는
-# 그 계보의 worked example 로만 등장하고, 상세·주장·데이터는 geworfen 몫이다.
+# 그 계보의 worked example 로만 등장한다. 목적지 분기(#1 정합): substrate 상세
+# 연구·변화 주장 = geworfen 트랙1 논문 몫 / 어휘 프로토콜(관성판·밀도판) =
+# jacobian-lens#1 몫. 어느 쪽도 이 서베이 본문에 스펙·결과로 들어오지 않는다.
 # 숫자 규칙: 규모·외연(노트/저널일수/가든/커밋/연한)만, 그것도 손 타이핑 금지 —
 # 재현 스냅샷 스크립트 산출로만 주입(task 2b). 전후·종단 효과 수치(수면/HRV/상관)는
 # 영구 진입 금지 — 그건 증명이고 #1/geworfen 몫이다.
@@ -298,8 +300,12 @@ A concrete contemporary instance of that surface is a self-owned, longitudinal
 substrate: a digital garden, daily journal, declarative environment, and
 long-lived agent harness that a person maintains over years so that agents can
 re-enter their context and co-work. This survey points to such an instance only
-to make the lineage concrete; its detailed study---and any claim about what it
-/changes/---belongs to the companion =geworfen= work, not here. What the lineage
+to make the lineage concrete. Its detailed study---and any claim about what the
+substrate /changes/---belongs to the companion =geworfen= work, not here; and
+the one measurable protocol this gap has so far yielded---whether a
+semantically dense, unfamiliar vocabulary system shifts an agent's register
+where a familiar one does not---is likewise kept outside the survey, registered
+in this observatory's issue tracker (=jacobian-lens#1=). What the lineage
 contributes to the present map is a name for the asymmetry named above: the labs
 instrument the inner workspace exhaustively, while the outer one---old as it is
 as an idea---remains comparatively uninstrumented.
