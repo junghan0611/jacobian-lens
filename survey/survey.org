@@ -239,19 +239,14 @@ suggests a counterpart question on the human side: the /outer/ workspace of
 tools, records, rhythms, and declared context a person assembles so that a
 long-lived agent can re-enter their world and co-work with them.
 
-This outer surface already has a name in the adjacent literature. Kevin Kelly
-calls the always-on agent that comes to sit at the edge of a person an
-/exoself/---"something in between our self and an other self," neither the self
-nor an outsider [cite:@kelly2026exoself]---a narrowing of Anders Sandberg's
-broader sense of cooperative systems that "blur the border between the core self
-and the world" (as quoted in [cite:@kelly2026exoself]); the term itself is
-borrowed from the science fiction of Greg Egan and Ron Hale-Evans. Read against
-the industrial program, the mapping is suggestive rather than settled: the labs'
-J-space is the model's inner workspace, and the exoself names a possible human-side
-outer workspace---a parallel functional question (what is reportable, what
-persists, what is causally load-bearing) asked on the far side of the interface.
-Kelly had reached the inner side earlier by intuition, in /The Emergent Self
-Loop/ [cite:@kelly2026emergentself]; the labs reached it by measurement.
+This outer surface has a name---and a longer lineage---in the adjacent
+literature, from Vannevar Bush's memex to Kevin Kelly's /exoself/
+[cite:@kelly2026exoself]: a lineage this survey takes up below. Read against the
+industrial program, the mapping is suggestive rather than settled: the labs'
+J-space is the model's inner workspace, and the exoself names a possible
+human-side outer workspace---a parallel functional question (what is reportable,
+what persists, what is causally load-bearing) asked on the far side of the
+interface.
 
 The asymmetry is the gap. The labs instrument the model exhaustively---indicator
 by indicator [cite:@butlin2023consciousness]---while far less work instruments

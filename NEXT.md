@@ -3,7 +3,8 @@
 메인 레인 핸드오프. 완료 항목은 지우고, 다음 한 걸음만 남긴다.
 리포 불변식은 `AGENTS.md`, 서베이 빌드는 `survey/README.md`가 SSOT.
 
-개정: 2026-07-08 오푸스 리뷰 + GPT 리뷰-리뷰(entwurf 메일, GLG 라우팅) 반영.
+개정: 2026-07-08 오푸스+GPT 리뷰 → task1(0부)·task2(3부) → GPT 검수 1라운드 반영
+→ 페블 큰그림 회신 반영(Q1 dedup·Q2 signpost/앱스트랙트·Q3 순서 4부→코다→2b).
 근거 검증 완료 — 트랙1 botlog(20260331T123550)의 생체 축이 전후 효과 프레임임을
 확인, bib 배선 지점(survey.org:6 + Makefile) 확인.
 
@@ -25,15 +26,15 @@ spine이자 payload다.** 범위 밖은 오직 실증·검증(증명·측정)뿐
 | 0부 선사 | Ilya 27 짓는 계보, 2020에서 끝 | ✅ survey.org "Before the turn" 절 |
 | 1부 독해 계보 | 기존 Strand 1–3 + 의식과학 | ✅ survey.org 본문 |
 | 2부 틈 | outer workspace (§gap) | ✅ 기존 |
-| 3부 트랙1 | augmentation 계보 서베이 + 힣 worked example | 🔨 신규 |
+| 3부 트랙1 | augmentation 계보 서베이 + 힣 worked example | ✅ survey.org "A lineage" 절 |
 | 4부 트랙2 | 문의 이야기 — 1KB·만남·비재현=보증 | 🔨 신규 |
 | 코다 | 하나의 서클, 한 문단 | 🔨 신규 |
 
 작업 순서:
 
 1. ✅ **목차 개편 + 0부 + bib 배선 (완료 2026-07-08 오푸스)** — survey.org에 Part 0
-   "Before the turn --- the building canon" 영어 신규 작성(canon: 10키 인용, logit
-   lens로 building→reading handoff). `#+bibliography: canon.bib` + Makefile 양쪽
+   "Before the turn --- the building canon" 영어 신규 작성(canon 9키 + logit lens
+   인용, building→reading handoff). `#+bibliography: canon.bib` + Makefile 양쪽
    배선. `make html` 그린(orphan cite 0). PDF는 nix develop에서 재검(배선 대칭).
    canon-bridge.org는 한글 sidecar로 유지. **다음 한 걸음 = 아래 2번(3부).**
 2. ✅ **3부 계보 절 + 가드 (완료 2026-07-08 오푸스)** — survey.org "A lineage for
@@ -41,17 +42,24 @@ spine이자 payload다.** 범위 밖은 오직 실증·검증(증명·측정)뿐
    Kelly exoself), inner↔outer는 "functional counterpart, not a proven twin"로
    헤지. 힣 substrate는 worked example로만(무명·무수치, geworfen 인용).
    references.bib에 Bush/Engelbart/Nelson 추가. 소스에 3부 가드 주석. `make html` 그린.
-2b. 🔨 **worked example 규모 숫자 주입 (다음 한 걸음)** — **손 타이핑 금지.**
-   denotecli·gitcli·bibcli로 규모·외연(노트/저널일수/가든/커밋/연한)만 뽑는 재현
-   스냅샷 스크립트를 survey/ 아래 + org 매크로 주입. ❌ 전후·종단 효과(수면/HRV/
-   상관)는 영구 진입 금지(#1/geworfen). 스냅샷 = LATER 인터랙티브 데이터 소스.
-3. **4부** — **문의 이야기는 공개한다**: 1KB(압축 아님·주소), 만남·시크릿키,
-   비재현성=보증의 서사와 인식론. 금지는 **스펙·조건·지표·측정만**. 소스에
-   가드 주석 삽입(아래 경계 참조).
-4. **본문 전반 헤지** — J-space(inner) ↔ outer workspace **과잉등치 금지**:
-   "functional analogy / missing counterpart / survey bridge" 수준 유지. §gap의
-   기존 헤지("suggestive rather than settled") 유지·강화. 서사는 공개하되
-   overclaim 없이.
+3. 🔨 **4부 트랙2 문 이야기 (다음 한 걸음 — 페블 Q3)** — 공개: 1KB(압축 아님·주소),
+   만남·시크릿키, 비재현성=보증의 서사와 인식론. 금지: **스펙·조건·지표·측정만** +
+   소스 가드 주석. **spine signpost(페블 Q2)**: 4부 첫 문단에서 "the human-side
+   question splits in two" 명시 선언 + 3부를 트랙1 지형으로 소급 명명 + 비대칭 잠금
+   한 문장("track-1 evidence, whatever it shows, neither proves nor refutes track 2").
+   트랙 언어는 여기서 처음(0~3부 소급 주입 금지). **⚠️ 앱스트랙트 갱신 필수**:
+   "We close by naming a gap"는 이미 거짓(§lineage가 gap 뒤) → "…ends at a door it
+   does not open" 류로 갱신.
+2b. 🔨 **worked example 규모 숫자 주입 (마지막 — 페블 Q3: 산문 안정 후)** — **손
+   타이핑 금지.** denotecli·gitcli·bibcli로 규모·외연(노트/저널일수/가든/커밋/연한)만
+   뽑는 재현 스냅샷 + org 매크로 주입. ❌ 전후·종단 효과(수면/HRV/상관) 영구 금지
+   (#1/geworfen). **익명 해제(페블 Q4)**: 숫자 붙으면 "a person" 익명 실질 해제 →
+   가짜 익명 대신 정직한 지시("the person this observatory supports")로. 스냅샷 =
+   LATER 인터랙티브 데이터 소스.
+4. ✅ **본문 전반 헤지 + Q1 dedup (완료 — GPT 1라운드 + 페블 Q1)** — inner↔outer
+   과잉등치 제거: 3부 "not a proven twin", §gap "suggests a counterpart question",
+   "suggestive rather than settled" 유지. §gap↔§lineage Kelly 중복은 §gap을 포워드
+   포인터로 봉합, 상세는 §lineage로.
 5. **코다 + bib 정리** — 새 인용 전부 bib에(orphan cite 0). 빌드 그린 유지
    (`make html` / `make pdf`).
 
