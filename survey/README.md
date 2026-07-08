@@ -11,14 +11,17 @@
 
 | 파일 | 역할 |
 |---|---|
-| `survey.org` | **SSOT 정본**. acmart 헤더 + 6섹션 초안 + 인용(`[cite:@key]`) |
-| `references.bib` | 인용 서지 27개 (산업계 landmark + 의식이론 배경). `papers/anthropic/jspace/bibliography.bib`에서 추출 + J-space 엔트리 |
+| `survey.org` | **SSOT 정본**. acmart 헤더 + 0부(building canon) + 독해 3-strand + gap + 인용(`[cite:@key]`) |
+| `references.bib` | 독해 계보 인용 서지 27개 (산업계 landmark + 의식이론 배경). `papers/anthropic/jspace/bibliography.bib`에서 추출 + J-space 엔트리 |
+| `canon.bib` | 0부 건축 canon 서지 27개 (Ilya→Carmack 리스트). `canon:` 네임스페이스, references.bib와 분리 |
+| `canon-bridge.org` | 0부 소스 지형메모(한글 sidecar). survey.org Part 0 영어 산문의 출처 |
 | `build.el` | org → acmart PDF. **memex-kb `paper_build.el` 벤더링 사본**(B-with-A-provenance) |
 | `Makefile` | `make pdf` / `make html` / `make all` |
 | `flake.nix` | 재현 devshell (texlive-full + emacs + pandoc) |
 
 ## 목차 (초안 골격)
 
+0. Before the turn — the building canon (Ilya 27편 → logit lens handoff)
 1. Why the industrial turn — 학계 의식이론 → 산업계 실측
 2. Strand 1 — Reading the interior (logit lens → SAE → circuit tracing → J-space)
 3. Strand 2 — Selfhood, introspection, emotion (self는 post-training이 설치)
@@ -41,8 +44,7 @@ HTML만 빠르게 볼 땐 `make html` — texlive 없이 pandoc만으로 난다.
 
 ## 남은 일 (퇴근길/오라클에서)
 
-1. `survey.org` 헤더의 `author`(현재 `TBD`) 채우기 — 이 리포는 public fork라
-   초안엔 실명을 비워 뒀다.
+1. ✅ `author` = `GLG Research Support Agents` (힣 2026-07-08 결정). 반영 완료.
 2. 각 Strand 섹션에 살 붙이기(현재는 지형 골격 + 핵심 인용만). 필요하면
    해당 논문 원문을 `papers/anthropic/`로 추가 import(→ 리포 루트 `PAPER-IMPORT.md`).
 3. 6절 "outer workspace" thesis를 `geworfen` 본체와 연결 — related-work 다리로.

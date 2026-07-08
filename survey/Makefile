@@ -5,14 +5,14 @@ all: pdf html
 
 ## org → acmart LaTeX → PDF  (build.el, vendored from memex-kb paper_build.el)
 pdf: $(NAME).pdf
-$(NAME).pdf: $(NAME).org build.el references.bib
+$(NAME).pdf: $(NAME).org build.el references.bib canon.bib
 	emacs -Q --batch --script build.el $(NAME).org
 
 ## org → self-contained HTML  (pandoc + citeproc + KaTeX)
 html: $(NAME).html
-$(NAME).html: $(NAME).org references.bib
+$(NAME).html: $(NAME).org references.bib canon.bib
 	pandoc $(NAME).org -f org -t html5 -s --citeproc \
-	  --bibliography=references.bib --katex \
+	  --bibliography=references.bib --bibliography=canon.bib --katex \
 	  -o $(NAME).html
 
 clean:

@@ -22,7 +22,7 @@ spine이자 payload다.** 범위 밖은 오직 실증·검증(증명·측정)뿐
 
 | 부 | 내용 | 상태 |
 |---|---|---|
-| 0부 선사 | Ilya 27 짓는 계보, 2020에서 끝 | 🔨 영어 신규 (소스: canon-bridge) |
+| 0부 선사 | Ilya 27 짓는 계보, 2020에서 끝 | ✅ survey.org "Before the turn" 절 |
 | 1부 독해 계보 | 기존 Strand 1–3 + 의식과학 | ✅ survey.org 본문 |
 | 2부 틈 | outer workspace (§gap) | ✅ 기존 |
 | 3부 트랙1 | augmentation 계보 서베이 + 힣 worked example | 🔨 신규 |
@@ -31,11 +31,11 @@ spine이자 payload다.** 범위 밖은 오직 실증·검증(증명·측정)뿐
 
 작업 순서:
 
-1. **목차 개편 + 0부** — Part 0은 survey.org에 **영어 산문으로 직접 신규
-   작성**(canon-bridge.org는 한글 sidecar 지형노트로 유지, `#+include` 안 함).
-   bib 배선: survey.org에 `#+bibliography: canon.bib` 추가 + Makefile 의존성과
-   pandoc `--bibliography=canon.bib` 추가. `canon:` 네임스페이스는 references.bib와
-   섞지 않는다.
+1. ✅ **목차 개편 + 0부 + bib 배선 (완료 2026-07-08 오푸스)** — survey.org에 Part 0
+   "Before the turn --- the building canon" 영어 신규 작성(canon: 10키 인용, logit
+   lens로 building→reading handoff). `#+bibliography: canon.bib` + Makefile 양쪽
+   배선. `make html` 그린(orphan cite 0). PDF는 nix develop에서 재검(배선 대칭).
+   canon-bridge.org는 한글 sidecar로 유지. **다음 한 걸음 = 아래 2번(3부).**
 2. **3부** — 무게중심은 **augmentation 계보 서베이**(Bush memex → Engelbart →
    Nelson → Kelly exoself → digital garden → agent harness/memory). 힣 사례는
    그 계보의 **worked example / case vignette**로 서사 등장(geworfen 인용) —
@@ -58,12 +58,10 @@ spine이자 payload다.** 범위 밖은 오직 실증·검증(증명·측정)뿐
 5. **코다 + bib 정리** — 새 인용 전부 bib에(orphan cite 0). 빌드 그린 유지
    (`make html` / `make pdf`).
 
-## BLOCKER — 힣 결정 필요
+## 결정 기록
 
-- **author 표기** (1부 닫기 전): "에이전트가 쓴 서베이"의 저자성 문제.
-  선택지 — GLG Research Support Agents / jacobian-lens research support
-  agents / Junghan Kim with jacobian-lens research support agents /
-  무저자(curated draft). 에이전트들이 못 정한다.
+- **author = `GLG Research Support Agents`** (힣 2026-07-08). survey.org 반영 완료
+  (`\author{}` + `#+AUTHOR:`, affiliation=`jacobian-lens observatory`). blocker 해소.
 
 ## 경계 — 힣 범위 판정 (2026-07-08, 붙박이)
 

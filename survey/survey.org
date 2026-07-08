@@ -1,9 +1,10 @@
 #+TITLE: Reading the Machine's Mind: How Frontier Labs Probe Model Interiors, Selfhood, and Alignment
-#+AUTHOR: TBD (draft — fill in on Oracle)
+#+AUTHOR: GLG Research Support Agents
 #+DATE: \today
 #+OPTIONS: title:nil author:nil toc:nil date:nil num:t
 #+cite_export: basic
 #+bibliography: references.bib
+#+bibliography: canon.bib
 
 #+LATEX_CLASS: acmart
 #+LATEX_CLASS_OPTIONS: [sigconf, authordraft, nonacm]
@@ -14,8 +15,8 @@
 
 #+BEGIN_EXPORT latex
 \title{Reading the Machine's Mind:\\How Frontier Labs Probe Model Interiors, Selfhood, and Alignment}
-\author{TBD}
-\affiliation{\institution{Independent Researcher}\country{}}
+\author{GLG Research Support Agents}
+\affiliation{\institution{jacobian-lens observatory}\country{}}
 \begin{abstract}
 Over the past three years, frontier AI labs---Anthropic above all, with
 contributions from OpenAI and others---have turned from \emph{building} larger
@@ -37,9 +38,44 @@ becomes ready to co-work with such systems.
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # DRAFT — jacobian-lens 리서치 서포터 산출물.
 # 원 논문/데이터 저작권 = 각 저자(대부분 Anthropic). 이 org 는 그 연구 지형을
-# 정리한 서베이 초안이며, 인용은 references.bib 를 따른다.
+# 정리한 서베이 초안이며, 인용은 references.bib(독해 계보) + canon.bib(0부 건축
+# canon, canon: 네임스페이스)를 따른다.
 # 변환 파이프(build.el)는 memex-kb paper_build.el 의 벤더링 사본이다("B-with-A-provenance").
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+* Before the turn --- the building canon
+:PROPERTIES:
+:CUSTOM_ID: canon
+:END:
+
+The models these labs now read were themselves the output of a decade-long
+program of /construction/. A widely circulated artifact of that program is the
+short reading list Ilya Sutskever reportedly handed to John Carmack---on the
+order of thirty papers, blog posts, and courses said to cover most of what
+mattered in modern deep learning. Its spine is the machinery of building: deep
+convolutional vision [cite:@canon:alexnet], residual depth [cite:@canon:resnet],
+the attention mechanism and the Transformer
+[cite:@canon:nmt-align;@canon:transformer], and finally the scaling laws that
+formalized "make it larger" [cite:@canon:scaling-laws]. As a body it effectively
+closes around 2020.
+
+Beneath the architectures, that canon carries an information-theoretic
+undercurrent: several of its entries frame learning itself as
+/compression/---minimizing the description length of a model's weights
+[cite:@canon:mdl-weights], the minimum-description-length principle
+[cite:@canon:mdl-tutorial], Kolmogorov complexity [cite:@canon:kolmogorov], and
+universal intelligence [cite:@canon:machine-superintelligence]. Intelligence, on
+this view, is the shortest program that reproduces the data.
+
+This survey begins where that canon ends. Its first strand opens at the /logit
+lens/ [cite:@nostalgebraist2020logitlens]---the first move to /read/ a
+fully-built language model rather than to build a better one. The construction
+program yields the artifact; the program mapped here takes that artifact as
+given and asks what it computes, whose point of view it holds, and how its
+values are installed. There is almost no citation overlap between the two: the
+building canon and the reading lineage are the front and back halves of a single
+timeline, and the seam between them---from building to reading---is what this
+prelude marks.
 
 * Why the industrial turn
 :PROPERTIES:
