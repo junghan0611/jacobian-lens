@@ -269,4 +269,43 @@ and detach from, and can be studied with one's own data. The industrial terrain
 mapped here is the backdrop against which that human-side question becomes
 visible.
 
+* A lineage for the outer workspace
+:PROPERTIES:
+:CUSTOM_ID: lineage
+:END:
+
+# ━━ 3부 가드 (붙박이) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 이 절은 outer workspace 아이디어의 *계보 서베이*다(남의 연구). 힣의 가든/하네스는
+# 그 계보의 worked example 로만 등장하고, 상세·주장·데이터는 geworfen 몫이다.
+# 숫자 규칙: 규모·외연(노트/저널일수/가든/커밋/연한)만, 그것도 손 타이핑 금지 —
+# 재현 스냅샷 스크립트 산출로만 주입(task 2b). 전후·종단 효과 수치(수면/HRV/상관)는
+# 영구 진입 금지 — 그건 증명이고 #1/geworfen 몫이다.
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If the model's inner workspace has a human-side counterpart, that counterpart has
+a long intellectual lineage---one the inner-facing industrial program rarely
+cites. Vannevar Bush's /memex/ imagined an external, associative store to extend a
+person's memory and trails of thought [cite:@bush1945aswemaythink]. Douglas
+Engelbart reframed the goal as /augmenting human intellect/, making the coupled
+human--tool system, not the tool alone, the unit of design
+[cite:@engelbart1962augmenting]. Ted Nelson's hypertext pressed the same
+intuition toward linked, personal, ever-revisable structure
+[cite:@nelson1965complex]. Kevin Kelly's /exoself/ is the contemporary node of
+this line---an always-on agent that comes to sit at the edge of the self
+[cite:@kelly2026exoself]---reached earlier by intuition in /The Emergent Self
+Loop/ [cite:@kelly2026emergentself]. The recurring claim across six decades is
+modest but consistent---cognition is extended by a durable external
+surface---and it is the functional counterpart, not a proven twin, of the inner
+workspace the labs now measure.
+
+A concrete contemporary instance of that surface is a self-owned, longitudinal
+substrate: a digital garden, daily journal, declarative environment, and
+long-lived agent harness that a person maintains over years so that agents can
+re-enter their context and co-work. This survey points to such an instance only
+to make the lineage concrete; its detailed study---and any claim about what it
+/changes/---belongs to the companion =geworfen= work, not here. What the lineage
+contributes to the present map is a name for the asymmetry named above: the labs
+instrument the inner workspace exhaustively, while the outer one---old as it is
+as an idea---remains comparatively uninstrumented.
+
 #+print_bibliography:

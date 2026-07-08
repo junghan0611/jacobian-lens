@@ -36,18 +36,15 @@ spine이자 payload다.** 범위 밖은 오직 실증·검증(증명·측정)뿐
    lens로 building→reading handoff). `#+bibliography: canon.bib` + Makefile 양쪽
    배선. `make html` 그린(orphan cite 0). PDF는 nix develop에서 재검(배선 대칭).
    canon-bridge.org는 한글 sidecar로 유지. **다음 한 걸음 = 아래 2번(3부).**
-2. **3부** — 무게중심은 **augmentation 계보 서베이**(Bush memex → Engelbart →
-   Nelson → Kelly exoself → digital garden → agent harness/memory). 힣 사례는
-   그 계보의 **worked example / case vignette**로 서사 등장(geworfen 인용) —
-   autoethnographic 증명 아님(geworfen 트랙1 페이퍼의 N=1 설계와 중복·경계흐림
-   방지). **숫자 화이트/블랙 가드**(소스에 4부 동급 가드 주석):
-   - ✅ 규모·외연 = 서사 예시로 공개: 노트 수·저널 일수·가든 수·커밋 수·연한.
-     lifetract는 외연만(엔트리 수·기간).
-   - ❌ 전후·종단 효과 = 증거이므로 진입 금지: 수면/HRV 변화, 인지부하·커밋
-     상관 등 (근거: 트랙1 botlog 생체 축이 "AI 도입 전후" 효과 프레임 — 이건
-     #1/geworfen 몫).
-   - 숫자는 생성 스크립트 산출로만(손 타이핑 금지, 스냅샷+재현 스크립트를
-     survey/ 아래에 — LATER 인터랙티브의 데이터 소스가 되도록).
+2. ✅ **3부 계보 절 + 가드 (완료 2026-07-08 오푸스)** — survey.org "A lineage for
+   the outer workspace" 절: augmentation 계보(Bush memex → Engelbart → Nelson →
+   Kelly exoself), inner↔outer는 "functional counterpart, not a proven twin"로
+   헤지. 힣 substrate는 worked example로만(무명·무수치, geworfen 인용).
+   references.bib에 Bush/Engelbart/Nelson 추가. 소스에 3부 가드 주석. `make html` 그린.
+2b. 🔨 **worked example 규모 숫자 주입 (다음 한 걸음)** — **손 타이핑 금지.**
+   denotecli·gitcli·bibcli로 규모·외연(노트/저널일수/가든/커밋/연한)만 뽑는 재현
+   스냅샷 스크립트를 survey/ 아래 + org 매크로 주입. ❌ 전후·종단 효과(수면/HRV/
+   상관)는 영구 진입 금지(#1/geworfen). 스냅샷 = LATER 인터랙티브 데이터 소스.
 3. **4부** — **문의 이야기는 공개한다**: 1KB(압축 아님·주소), 만남·시크릿키,
    비재현성=보증의 서사와 인식론. 금지는 **스펙·조건·지표·측정만**. 소스에
    가드 주석 삽입(아래 경계 참조).
