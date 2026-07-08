@@ -51,8 +51,8 @@ becomes ready to co-work with such systems.
 The models these labs now read were themselves the output of a decade-long
 program of /construction/. A widely circulated artifact of that program is the
 short reading list Ilya Sutskever reportedly handed to John Carmack---on the
-order of thirty papers, blog posts, and courses said to cover most of what
-mattered in modern deep learning. Its spine is the machinery of building: deep
+order of thirty papers, blog posts, and courses presented as covering a compact
+core of modern deep learning. Its spine is the machinery of building: deep
 convolutional vision [cite:@canon:alexnet], residual depth [cite:@canon:resnet],
 the attention mechanism and the Transformer
 [cite:@canon:nmt-align;@canon:transformer], and finally the scaling laws that
@@ -64,11 +64,12 @@ undercurrent: several of its entries frame learning itself as
 /compression/---minimizing the description length of a model's weights
 [cite:@canon:mdl-weights], the minimum-description-length principle
 [cite:@canon:mdl-tutorial], Kolmogorov complexity [cite:@canon:kolmogorov], and
-universal intelligence [cite:@canon:machine-superintelligence]. Intelligence, on
-this view, is the shortest program that reproduces the data.
+universal intelligence [cite:@canon:machine-superintelligence]. On this view,
+learning is cast as compression: good models are short descriptions that predict
+the data, and intelligence is tied to such simplicity-weighted generalization.
 
 This survey begins where that canon ends. Its first strand opens at the /logit
-lens/ [cite:@nostalgebraist2020logitlens]---the first move to /read/ a
+lens/ [cite:@nostalgebraist2020logitlens]---an early canonical move to /read/ a
 fully-built language model rather than to build a better one. The construction
 program yields the artifact; the program mapped here takes that artifact as
 given and asks what it computes, whose point of view it holds, and how its
@@ -233,10 +234,10 @@ Every strand above looks /inward/: into the model's activations, its self-model,
 its internalized values. This is the natural move for a model-builder, whose
 object of study is the artifact. But it leaves a symmetric question untouched.
 If the model has an inner workspace---a reportable, capacity-limited
-representation that downstream processes read from [cite:@gurnee2026workspace]---the
-human working alongside it has an /outer/ one: the tools, records, rhythms, and
-declared context a person assembles so that a long-lived agent can re-enter their
-world and co-work with them.
+representation that downstream processes read from [cite:@gurnee2026workspace]---it
+suggests a counterpart question on the human side: the /outer/ workspace of
+tools, records, rhythms, and declared context a person assembles so that a
+long-lived agent can re-enter their world and co-work with them.
 
 This outer surface already has a name in the adjacent literature. Kevin Kelly
 calls the always-on agent that comes to sit at the edge of a person an
