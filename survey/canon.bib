@@ -1,0 +1,242 @@
+% canon.bib — Ilya Sutskever's ~30-paper reading list (the one he gave John Carmack).
+%
+% jacobian-lens 가 힣 대신 흡수한 "건축 canon"이다. 힣은 이걸 공부하지 않는다(그게
+% 리서치 서포터가 있는 이유). 이 파일은 survey/references.bib 와 분리해 둔다 —
+% references.bib 는 서베이가 실제로 인용하는 '독해 계보'이고, 이 canon 은 그 계보의
+% 선사(prehistory)로서 별도 보관한다. 서사 연결은 survey/canon-bridge.org 참조.
+%
+% 출처: 30papers.com / github.com/dzyim/ilya-sutskever-recommended-reading (2019년
+% Carmack 에게 건넨 ~40편 중 유실 후 재구성된 27항목). 키 접두사 canon: 로 네임스페이스.
+
+@misc{canon:annotated-transformer,
+  author = {Rush, Alexander M.},
+  title  = {The Annotated Transformer},
+  year   = {2018},
+  note   = {blog/code, Harvard NLP},
+  url    = {https://nlp.seas.harvard.edu/annotated-transformer/}
+}
+
+@misc{canon:complexodynamics,
+  author = {Aaronson, Scott},
+  title  = {The First Law of Complexodynamics},
+  year   = {2011},
+  note   = {blog},
+  url    = {https://scottaaronson.blog/?p=762}
+}
+
+@misc{canon:rnn-effectiveness,
+  author = {Karpathy, Andrej},
+  title  = {The Unreasonable Effectiveness of Recurrent Neural Networks},
+  year   = {2015},
+  note   = {blog/code},
+  url    = {https://karpathy.github.io/2015/05/21/rnn-effectiveness/}
+}
+
+@misc{canon:understanding-lstm,
+  author = {Olah, Christopher},
+  title  = {Understanding LSTM Networks},
+  year   = {2015},
+  note   = {blog},
+  url    = {https://colah.github.io/posts/2015-08-Understanding-LSTMs/}
+}
+
+@article{canon:rnn-regularization,
+  author  = {Zaremba, Wojciech and Sutskever, Ilya and Vinyals, Oriol},
+  title   = {Recurrent Neural Network Regularization},
+  year    = {2014},
+  journal = {arXiv preprint},
+  eprint  = {1409.2329},
+  url     = {https://arxiv.org/abs/1409.2329}
+}
+
+@inproceedings{canon:mdl-weights,
+  author    = {Hinton, Geoffrey E. and van Camp, Drew},
+  title     = {Keeping Neural Networks Simple by Minimizing the Description Length of the Weights},
+  year      = {1993},
+  booktitle = {COLT},
+  url       = {https://dl.acm.org/doi/10.1145/168304.168306}
+}
+
+@inproceedings{canon:pointer-networks,
+  author    = {Vinyals, Oriol and Fortunato, Meire and Jaitly, Navdeep},
+  title     = {Pointer Networks},
+  year      = {2015},
+  booktitle = {NIPS},
+  url       = {https://papers.nips.cc/paper/5866-pointer-networks}
+}
+
+@inproceedings{canon:alexnet,
+  author    = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+  title     = {ImageNet Classification with Deep Convolutional Neural Networks},
+  year      = {2012},
+  booktitle = {NIPS},
+  url       = {https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks}
+}
+
+@article{canon:order-matters,
+  author  = {Vinyals, Oriol and Bengio, Samy and Kudlur, Manjunath},
+  title   = {Order Matters: Sequence to Sequence for Sets},
+  year    = {2015},
+  journal = {arXiv preprint},
+  eprint  = {1511.06391},
+  url     = {https://arxiv.org/abs/1511.06391}
+}
+
+@article{canon:gpipe,
+  author  = {Huang, Yanping and Cheng, Youlong and Bapna, Ankur and others},
+  title   = {GPipe: Easy Scaling with Micro-Batch Pipeline Parallelism},
+  year    = {2018},
+  journal = {arXiv preprint},
+  eprint  = {1811.06965},
+  url     = {https://arxiv.org/abs/1811.06965}
+}
+
+@article{canon:resnet,
+  author  = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  title   = {Deep Residual Learning for Image Recognition},
+  year    = {2015},
+  journal = {arXiv preprint},
+  eprint  = {1512.03385},
+  url     = {https://arxiv.org/abs/1512.03385}
+}
+
+@article{canon:dilated-conv,
+  author  = {Yu, Fisher and Koltun, Vladlen},
+  title   = {Multi-Scale Context Aggregation by Dilated Convolutions},
+  year    = {2015},
+  journal = {arXiv preprint},
+  eprint  = {1511.07122},
+  url     = {https://arxiv.org/abs/1511.07122}
+}
+
+@article{canon:mpnn,
+  author  = {Gilmer, Justin and Schoenholz, Samuel S. and Riley, Patrick F. and Vinyals, Oriol and Dahl, George E.},
+  title   = {Neural Message Passing for Quantum Chemistry},
+  year    = {2017},
+  journal = {arXiv preprint},
+  eprint  = {1704.01212},
+  url     = {https://arxiv.org/abs/1704.01212}
+}
+
+@article{canon:transformer,
+  author  = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and others},
+  title   = {Attention Is All You Need},
+  year    = {2017},
+  journal = {arXiv preprint},
+  eprint  = {1706.03762},
+  url     = {https://arxiv.org/abs/1706.03762}
+}
+
+@article{canon:nmt-align,
+  author  = {Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
+  title   = {Neural Machine Translation by Jointly Learning to Align and Translate},
+  year    = {2014},
+  journal = {arXiv preprint},
+  eprint  = {1409.0473},
+  url     = {https://arxiv.org/abs/1409.0473}
+}
+
+@article{canon:identity-mappings,
+  author  = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  title   = {Identity Mappings in Deep Residual Networks},
+  year    = {2016},
+  journal = {arXiv preprint},
+  eprint  = {1603.05027},
+  url     = {https://arxiv.org/abs/1603.05027}
+}
+
+@article{canon:relational-reasoning,
+  author  = {Santoro, Adam and Raposo, David and Barrett, David G. T. and others},
+  title   = {A Simple Neural Network Module for Relational Reasoning},
+  year    = {2017},
+  journal = {arXiv preprint},
+  eprint  = {1706.01427},
+  url     = {https://arxiv.org/abs/1706.01427}
+}
+
+@article{canon:vlae,
+  author  = {Chen, Xi and Kingma, Diederik P. and Salimans, Tim and others},
+  title   = {Variational Lossy Autoencoder},
+  year    = {2016},
+  journal = {arXiv preprint},
+  eprint  = {1611.02731},
+  url     = {https://arxiv.org/abs/1611.02731}
+}
+
+@article{canon:relational-rnn,
+  author  = {Santoro, Adam and Faulkner, Ryan and Raposo, David and others},
+  title   = {Relational Recurrent Neural Networks},
+  year    = {2018},
+  journal = {arXiv preprint},
+  eprint  = {1806.01822},
+  url     = {https://arxiv.org/abs/1806.01822}
+}
+
+@article{canon:coffee-automaton,
+  author  = {Aaronson, Scott and Carroll, Sean M. and Ouellette, Lauren},
+  title   = {Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton},
+  year    = {2014},
+  journal = {arXiv preprint},
+  eprint  = {1405.6903},
+  url     = {https://arxiv.org/abs/1405.6903}
+}
+
+@article{canon:neural-turing,
+  author  = {Graves, Alex and Wayne, Greg and Danihelka, Ivo},
+  title   = {Neural Turing Machines},
+  year    = {2014},
+  journal = {arXiv preprint},
+  eprint  = {1410.5401},
+  url     = {https://arxiv.org/abs/1410.5401}
+}
+
+@article{canon:deep-speech-2,
+  author  = {Amodei, Dario and Ananthanarayanan, Sundaram and Anubhai, Rishita and others},
+  title   = {Deep Speech 2: End-to-End Speech Recognition in English and Mandarin},
+  year    = {2015},
+  journal = {arXiv preprint},
+  eprint  = {1512.02595},
+  url     = {https://arxiv.org/abs/1512.02595}
+}
+
+@article{canon:scaling-laws,
+  author  = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and others},
+  title   = {Scaling Laws for Neural Language Models},
+  year    = {2020},
+  journal = {arXiv preprint},
+  eprint  = {2001.08361},
+  url     = {https://arxiv.org/abs/2001.08361}
+}
+
+@article{canon:mdl-tutorial,
+  author  = {Gr\"{u}nwald, Peter},
+  title   = {A Tutorial Introduction to the Minimum Description Length Principle},
+  year    = {2004},
+  journal = {arXiv preprint},
+  eprint  = {math/0406077},
+  url     = {https://arxiv.org/abs/math/0406077}
+}
+
+@phdthesis{canon:machine-superintelligence,
+  author = {Legg, Shane},
+  title  = {Machine Super Intelligence},
+  year   = {2008},
+  school = {University of Lugano},
+  url    = {https://www.vetta.org/documents/Machine_Super_Intelligence.pdf}
+}
+
+@book{canon:kolmogorov,
+  author    = {Shen, Alexander and Uspensky, Vladimir A. and Vereshchagin, Nikolay},
+  title     = {Kolmogorov Complexity and Algorithmic Randomness},
+  year      = {2017},
+  publisher = {American Mathematical Society},
+  url       = {https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf}
+}
+
+@misc{canon:cs231n,
+  author = {Li, Fei-Fei and Karpathy, Andrej and Johnson, Justin},
+  title  = {CS231n: Convolutional Neural Networks for Visual Recognition},
+  year   = {2015},
+  note   = {course, Stanford},
+  url    = {https://cs231n.github.io/}
+}
